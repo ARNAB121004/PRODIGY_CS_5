@@ -18,10 +18,11 @@ def packet_callback(packet):
 
 # Main function
 if __name__ == "__main__":
-    print("🚀 Packet Sniffer Started (Press Ctrl+C to stop)")
+    print("Packet Sniffer Started (Press Ctrl+C to stop)")
     try:
         sniff(prn=packet_callback, store=False)
     except PermissionError:
-        print("\n❌ Permission denied: Please run as administrator/root.")
+        print("Permission denied: Please run as administrator/root.")
     except KeyboardInterrupt:
-        print("\n🛑 Sniffer stopped by user.")
+        print("Sniffer stopped by user.")
+
